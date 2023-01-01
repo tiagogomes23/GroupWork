@@ -1,0 +1,44 @@
+﻿@page
+@model GroupWork.Pages.Contactos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Contacto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Contacto.Name" class="control-label"></label>
+                <input asp-for="Contacto.Name" class="form-control" />
+                <span asp-validation-for="Contacto.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contacto.Birthdate" class="control-label"></label>
+                <input asp-for="Contacto.Birthdate" class="form-control" />
+                <span asp-validation-for="Contacto.Birthdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contacto.Number" class="control-label"></label>
+                <input asp-for="Contacto.Number" class="form-control" />
+                <span asp-validation-for="Contacto.Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
