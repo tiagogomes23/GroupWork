@@ -23,6 +23,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\cSharp.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\cSharp.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\Images\Learn.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="bin\program.jpg" />
   </ItemGroup>
 
